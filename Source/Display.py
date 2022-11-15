@@ -26,8 +26,9 @@ def display():
 # Atribut Here!
 def atribut(MW):
     '''FUNCTION ATRIBUT'''
-    input_frame = ttk.Frame()
+    from Disable_Keyboard import block_key
 
+    input_frame = ttk.Frame()
     # Label
     Label = ttk.Label(input_frame, text="Disable Your Keyboard: ")
     Dummy_label = ttk.Label(input_frame, text="")
