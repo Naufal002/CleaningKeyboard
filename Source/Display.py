@@ -14,7 +14,8 @@ from tkinter import ttk
 def display():
     '''FUNCTION DISPLAY'''
     Main_Window = tk.Tk()
-
+    
+    Main_Window.iconbitmap('C:/Users/Administrator/Documents/CleaningKeyboard/Assets/icon2.ico')
     Main_Window.geometry('300x200')
     Main_Window.title('Cleaning Keyboard')
     Main_Window.configure(bg='white')
