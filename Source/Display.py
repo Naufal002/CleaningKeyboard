@@ -14,7 +14,7 @@ from tkinter import ttk
 def display():
     '''FUNCTION DISPLAY'''
     Main_Window = tk.Tk()
-    
+
     Main_Window.iconbitmap('C:/Users/Administrator/Documents/CleaningKeyboard/Assets/icon2.ico')
     Main_Window.geometry('300x200')
     Main_Window.title('Cleaning Keyboard')
@@ -49,15 +49,5 @@ def atribut(MW):
     Seccond_Dummy_label.pack()
     Button.pack()
     MW.mainloop()
-
-# Block Key Here
-def block_key():
-    import keyboard
-    import time
-
-    for i in range(150):
-        keyboard.block_key(i)
-        time.sleep(3600)
-
     
 display()
