@@ -10,6 +10,7 @@ if __name__ == "__main__":
 import tkinter as tk
 from tkinter import ttk
 
+# Display Here!
 def display():
     '''FUNCTION DISPLAY'''
     Main_Window = tk.Tk()
@@ -21,7 +22,7 @@ def display():
 
     atribut(Main_Window)
 
-
+# Atribut Here!
 def atribut(MW):
     '''FUNCTION ATRIBUT'''
     input_frame = ttk.Frame()
@@ -48,6 +49,7 @@ def atribut(MW):
     Button.pack()
     MW.mainloop()
 
+# Block Key Here
 def block_key():
     import keyboard
     import time
