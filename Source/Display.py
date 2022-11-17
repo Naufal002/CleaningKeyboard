@@ -34,7 +34,6 @@ def atribut(MW):
     Label = ttk.Label(input_frame, text="Disable Your Keyboard: ")
     Seccond_label = ttk.Label(input_frame, text="-Close the program to end process-")
 
-
     # Combobox
     # data_combobox = ['Disable', 'Undisable']
     # Combobox = ttk.Combobox(input_frame, values= data_combobox)
@@ -62,5 +61,4 @@ def block_key():
         keyboard.block_key(i)
         time.sleep(10)
 '''
-
 display()
