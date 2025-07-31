@@ -1,22 +1,15 @@
 import os
-if __name__ == "__main__":
-    opereting_system = os.name
-
-    match opereting_system:
-        case "posix" : os.system('clear')
-        case "nt" : os.system('cls')
-
-
 import tkinter as tk
 from tkinter import ttk
 from tkinter.messagebox import showinfo
+from keyboard_functions import *
 
 # Display Here!
 def display():
     '''FUNCTION DISPLAY'''
     Main_Window = tk.Tk()
 
-    Main_Window.iconbitmap('C:/Users/Administrator/Documents/CleaningKeyboard/Assets/icon2.ico')
+    Main_Window.iconbitmap('D:/PythonProject/CleaningKeyboard/assets/icon2.ico')
     Main_Window.geometry('300x200')
     Main_Window.title('Cleaning Keyboard')
     Main_Window.configure(bg='white')
@@ -27,12 +20,11 @@ def display():
 # Atribut Here!
 def atribut(MW):
     '''FUNCTION ATRIBUT'''
-    from Disable_Keyboard import block_key
 
     input_frame = ttk.Frame()
     # Label
     Label = ttk.Label(input_frame, text="Disable Your Keyboard: ")
-    Seccond_label = ttk.Label(input_frame, text="-Close the program to end process-")
+    Seccond_label = ttk.Label(input_frame, text="-Close the window to end process-")
 
     # Combobox
     # data_combobox = ['Disable', 'Undisable']
@@ -40,7 +32,8 @@ def atribut(MW):
 
     # Button
     Seccond_Dummy_label = ttk.Label(input_frame, text="")
-    Button = ttk.Button(input_frame, text= "Disable!", command= block_key)
+    button_blockkey = ttk.Button(input_frame, text= "Disable!",command= functionBlockKey)
+    button_unblockkey = ttk.Button(input_frame, text= "Enable keyboard", command= functionUnblockKey)
 
     # Pack
     input_frame.pack(padx=10,pady=10,fill='x',expand=True)
@@ -48,7 +41,8 @@ def atribut(MW):
     Seccond_label.pack()
     # Combobox.pack()
     Seccond_Dummy_label.pack()
-    Button.pack()
+    button_blockkey.pack()
+    button_unblockkey.pack()
     MW.mainloop()
 
 '''
@@ -61,4 +55,10 @@ def block_key():
         keyboard.block_key(i)
         time.sleep(10)
 '''
-display()
+if __name__ == "__main__":
+    display()
+    opereting_system = os.name
+
+    match opereting_system:
+        case "posix" : os.system('clear')
+        case "nt" : os.system('cls')
