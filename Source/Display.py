@@ -1,7 +1,6 @@
 import os
 import tkinter as tk
 from tkinter import ttk
-from tkinter.messagebox import showinfo
 from keyboard_functions import *
 
 # Display Here!
@@ -10,7 +9,7 @@ def display():
     Main_Window = tk.Tk()
 
     Main_Window.iconbitmap('D:/PythonProject/CleaningKeyboard/assets/icon2.ico')
-    Main_Window.geometry('300x200')
+    Main_Window.geometry('500x300')
     Main_Window.title('Cleaning Keyboard')
     Main_Window.configure(bg='white')
     Main_Window.resizable(False,False)
@@ -20,11 +19,12 @@ def display():
 # Atribut Here!
 def atribut(MW):
     '''FUNCTION ATRIBUT'''
-
+    # Frame
     input_frame = ttk.Frame()
     # Label
-    Label = ttk.Label(input_frame, text="Disable Your Keyboard: ")
-    Seccond_label = ttk.Label(input_frame, text="-Close the window to end process-")
+    label = ttk.Label(input_frame, text="CLEAN YOUR KEYBOARD WITHOUT TRUN OFF YOUR LAPTOP")
+    title = ttk.Label(input_frame, text="Disable Your Keyboard")
+    subTitle = ttk.Label(input_frame, text="-Close the window to end process-")
 
     # Combobox
     # data_combobox = ['Disable', 'Undisable']
@@ -32,17 +32,18 @@ def atribut(MW):
 
     # Button
     Seccond_Dummy_label = ttk.Label(input_frame, text="")
-    button_blockkey = ttk.Button(input_frame, text= "Disable!",command= functionBlockKey)
-    button_unblockkey = ttk.Button(input_frame, text= "Enable keyboard", command= functionUnblockKey)
+    button_blockkey = ttk.Button(input_frame, text= "Disable", command= functionBlockKey)
+    button_unblockkey = ttk.Button(input_frame, text= "Enable", command= functionUnblockKey)
 
     # Pack
     input_frame.pack(padx=10,pady=10,fill='x',expand=True)
-    Label.pack()
-    Seccond_label.pack()
+    label.pack()
+    title.pack()
+    subTitle.pack()
     # Combobox.pack()
     Seccond_Dummy_label.pack()
-    button_blockkey.pack()
-    button_unblockkey.pack()
+    button_blockkey.pack(pady= 5)
+    button_unblockkey.pack(pady= 5)
     MW.mainloop()
 
 '''
